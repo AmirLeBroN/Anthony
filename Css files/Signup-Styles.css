@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Maintransition: all 0.4s ease;
+}
+/*
+================== 
+    FONT-FACE
+==================
+*/
+@font-face {
+  font-family: "Poppin-medium";
+  src: url(/Fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppin-bold";
+  src: url(/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppin-semibold";
+  src: url(/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppin-regular";
+  src: url(/Fonts/Poppins-Regular.ttf);
+}
+body {
+  background: url("/images/gaming-hq3.png") left/cover fixed no-repeat;
+}
+.form {
+  background: white;
+  width: 400px;
+  height: 510px;
+  margin: 100px auto;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.8);
+}
+.header-form {
+  font-family: poppin-semibold;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.fa-user{
+  padding: 15px 0 0 330px;
+}
+.fa-lock{
+  padding-left: 330px;
+  padding-top: 36px;
+}
+.inputs i{
+  position: absolute;
+}
+.inputs {
+  margin: 0px 20px 0 20px;
+}
+.inp {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  height: 50px;
+  border-radius: 7px;
+  border: 2px solid rgb(199, 199, 199);
+}
+::placeholder{
+  text-transform: capitalize;
+  padding-left: 20px;
+  font-family: poppin-medium;
+}
+.link-login {
+  margin: 20px;
+  font-family: poppin-medium;
+}
+.before-link {
+  color: rgb(112, 108, 108);
+}
+.link-login a {
+  text-decoration: none;
+  color: rgb(247, 37, 117);
+  transition: all 0.3s ease;
+}
+.link-login a:hover{
+  color:rgba(247, 37, 117,0.7) ;
+}
+.btn-signup:hover{
+  background: rgba(247, 37, 117,0.7);
+}
+.btn-signup {
+  width: 90%;
+  transition: all 0.5s ease;
+  display: block;
+  margin-left: 19px;
+  border-radius: 30px;
+  height: 50px;
+  background: rgb(247, 37, 117);
+  color: white;
+  font-family: poppin-semibold;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+.content-divider {
+  margin-top: 20px;
+}
+.or-before {
+  width: 40%;
+  height: 1px;
+  background: rgb(173, 173, 173);
+  display: inline-flex;
+  margin-left: 30px;
+}
+.or {
+  text-align: center;
+  font-family: poppin-regular;
+}
+.or-after {
+  width: 40%;
+  height: 1px;
+  background: rgb(173, 173, 173);
+  display: inline-flex;
+}
+.apple-btn{
+  width: 90%;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+  margin-left: 19px;
+  border-radius: 30px;
+  height: 50px;
+  background: white;
+  font-family: poppin-semibold;
+  font-size: 1.2rem;
+}
+.fa-apple{
+  padding: 0 13px 0 0;
+  font-size: 26px;
+}

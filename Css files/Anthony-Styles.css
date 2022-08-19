@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+body {
+  background: #fff;
+}
+@font-face {
+  font-family: "catamaran";
+  src: url(/Fonts/Catamaran-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(/Fonts/Montserrat-VariableFont_wght.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "fira";
+  src: url(/Fonts/FiraCode-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "grand";
+  src: url(/Fonts/GrandHotel-Regular.ttf);
+}
+@font-face {
+  font-family: "poppin";
+  src: url(/Fonts/Poppins-Regular.ttf);
+}
+/* 
+================
+  :ROOT
+=================
+*/
+:root {
+  --Maintransition: all 1s 0.1s ease;
+  --Letterspacing: 2px;
+  --Maincolor: rgb(15, 183, 189);
+  --FFtitle: montserrat;
+  --FFparagraph: poppin;
+  --Clrgreyback: #f1f5f8;
+}
+/* 
+================
+  ANIMATIONS
+=================
+*/
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translate(1000px, 250px);
+  }
+  50% {
+    transform: translate(-200px, 250px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(50px, 250px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(0px, 250px);
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-1000px, 250px);
+  }
+  50% {
+    transform: translate(200px, 250px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(-50px, 250px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(0px, 250px);
+    opacity: 1;
+  }
+}
+/* 
+================
+  NAVIGATION BAR
+=================
+*/
+div ul {
+  text-align: center;
+  background: black;
+  min-width: 100vw;
+  height: 60px;
+  z-index: 1;
+  position: fixed;
+  overflow: hidden;
+}
+li {
+  list-style-type: none;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 10px;
+  /* transform: translateX(30rem); */
+}
+.link-nav {
+  overflow: hidden;
+  margin: 0 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-transform: capitalize;
+  font-family: Montserrat;
+  display: flex;
+  letter-spacing: var(--Letterspacing);
+  transition: var(--Maintransition);
+}
+.link-nav:hover {
+  /* background: rgb(70, 69, 69); */
+  color: rgba(254, 255, 255, 0.747);
+  transform: translateY(7px);
+}
+/* 
+================
+  BANNER HEAD
+=================
+*/
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/Valorant-Highjpg.jpg") center/cover fixed no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+.banner h2 {
+  text-align: center;
+  font-family: poppin;
+  color: rgb(253, 253, 253);
+  text-transform: capitalize;
+  transform: translateY(250px);
+  font-size: 1.9rem;
+  animation: slideFromRight 5s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+.banner h1 {
+  text-align: center;
+  font-family: grand;
+  color: rgb(15, 183, 189);
+  text-transform: capitalize;
+  transform: translateY(250px);
+  font-size: 2.7rem;
+  animation: slideFromLeft 5s ease-in-out 1;
+}
+.content-divider {
+  height: 7px;
+  background: linear-gradient(
+    to left,
+    rgb(15, 183, 189),
+    yellow,
+    rgb(15, 183, 189)
+  );
+}
+/* 
+================
+  BODY
+=================
+*/
+/* 
+================
+  WHY
+=================
+*/
+.icon {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  transition: var(--Maintransition);
+  color: rgb(15, 187, 144);
+}
+.re:hover .icon {
+  transform: translateY(-10px);
+}
+.re:hover {
+  background: #fff;
+  box-shadow: 0 2px 0 rgb(15, 183, 189);
+}
+.re {
+  float: left;
+  width: 25%;
+  text-align: center;
+  text-transform: capitalize;
+  background: #f1f5f8;
+  transition: var(--Maintransition);
+  padding-top: 30px;
+  height: 210px;
+  font-family: var(--FFparagraph);
+}
+.re-text {
+  color: #617d98;
+  padding: 10px;
+  line-height: 1.2rem;
+}
+/* 
+================
+  ABOUT US
+=================
+*/
+.texton {
+  position: absolute;
+  top: 8rem;
+  left: 13rem;
+  color: #fff;
+  font-family: poppin;
+  transition: var(--Maintransition);
+  opacity: 0;
+}
+.about-pic-hover:hover .texton {
+  opacity: 1;
+}
+.about-pic-hover {
+  background: var(--Maincolor);
+  border: 0.5rem solid var(--Maincolor);
+  border-bottom: 0.3rem solid var(--Maincolor);
+  max-width: 32rem;
+  margin-left: 10rem;
+  overflow: hidden;
+  position: relative;
+}
+.about-pic-hover:hover .about-picture {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+.about-picture {
+  width: 100%;
+  transition: var(--Maintransition);
+}
+.about-image,
+.about-info {
+  float: left;
+  width: 50%;
+  margin: 4rem 0;
+}
+.about-info {
+  padding-left: 5rem;
+}
+.about-info h3 {
+  font-family: grand;
+  font-size: 4rem;
+  color: var(--Maincolor);
+}
+.about-info h2 {
+  font-family: var(--FFtitle);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.about-info p {
+  font-family: var(--FFparagraph);
+  line-height: 1.6rem;
+}
+.link-about {
+  background: var(--Maincolor);
+  display: inline-block;
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  letter-spacing: 4px;
+  font-family: var(--FFtitle);
+  cursor: pointer;
+  transition: all 0.5s linear;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+.link-about:hover {
+  color: var(--Maincolor);
+  background: rgba(15, 183, 189, 0.2);
+}
+
+/* 
+================
+  EXPLORE
+=================
+*/
+.top-games {
+  margin: 5rem 0;
+}
+.title-explore h3 {
+  font-family: grand;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--Maincolor);
+}
+.title-explore h2 {
+  font-family: var(--FFtitle);
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.explore-games {
+  float: left;
+  width: 30%;
+  margin: 0 1.5%;
+  transition: var(--Maintransition);
+}
+.explore-games:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  scale: 1.02;
+}
+.image-explore {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.explore-text {
+  background: var(--Clrgreyback);
+  text-align: center;
+  line-height: 26px;
+  padding: 3rem 1rem 2.5rem 1rem;
+}
+.explore-text h2 {
+  font-family: var(--FFparagraph);
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.explore-text p {
+  font-family: var(--FFparagraph);
+  padding-top: 2rem;
+}
+.image-container {
+  position: relative;
+}
+.icon-explore {
+  font-size: 2rem;
+  position: absolute;
+  transform: translateX(11.5rem);
+  background: var(--Maincolor);
+  padding: 0.7rem;
+  border: 1rem solid var(--Clrgreyback);
+  border-radius: 100%;
+  transform: translate(200px, -50px);
+}
+/* 
+================
+CONTACT
+=================
+*/
+.contact {
+  background-color: #f1f5f8;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-top: 120px;
+}
+.email {
+  float: left;
+  width: 35%;
+  background: rgb(255, 255, 255);
+  margin: 65px 40px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  border-radius: 15px;
+}
+.text {
+  float: left;
+  width: 40%;
+  padding: 60px 0 0 120px;
+  font-size: 20px;
+  font-family: catamaran;
+  text-transform: capitalize;
+}
+.p-contact {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-left: 7px;
+}
+.title-contact {
+  letter-spacing: 2px;
+  padding-left: 8px;
+  color: var(--Maincolor);
+}
+.icon-contact {
+  color: var(--Maincolor);
+  font-size: 1.2rem;
+}
+.inp-contact {
+  display: block;
+  border: none;
+  background: #f1f5f8;
+  border: 30px;
+  margin-bottom: 30px;
+  margin-top: 8px;
+  margin-left: 14px;
+  padding: 0.75rem 1rem;
+  width: 95%;
+  
+}
+.inp-contact::placeholder {
+  text-transform: uppercase;
+}
+.email h3 {
+  font-size: 3rem;
+  color: rgba(20, 59, 168, 0.692);
+  font-family: catamaran;
+  letter-spacing: 4px;
+  text-align: center;
+}
+.btn-contact{
+  width: 100%;
+  background-color: var(--Maincolor);
+  color: white;
+  border: none;
+  height: 40px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-family: montserrat;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.btn-contact:hover{
+color: var(--Maincolor);
+background: rgba(15,183,189,0.3);
+}
+.footer{
+  background-color: #222;
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+  text-align: center;
+}
+.icon-footer{
+  color: white;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 1.7rem;
+  margin: 45px 25px 25px 0;
+}
+.icon-footer:hover{
+  color: var(--Maincolor);
+}
+.footer h3{
+  color: white;
+  font-family: poppin;
+  letter-spacing: 3px;
+}
+.company{
+  color: var(--Maincolor);
+}

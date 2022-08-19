@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --Maintransition: all 0.4s ease
+}
+/*
+================== 
+    FONT-FACE
+==================
+*/
+@font-face {
+  font-family: "Poppin-medium";
+  src: url(/Fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppin-bold";
+  src: url(/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppin-semibold";
+  src: url(/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppin-regular";
+  src: url(/Fonts/Poppins-Regular.ttf);
+}
+/*
+================== 
+    FORM
+==================
+*/
+.form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-form {
+  font-family: poppin-bold, sans-serif;
+  text-align: center;
+  font-size: 39px;
+  color: #3d3d3d;
+  margin: 5rem auto;
+  text-transform: capitalize;
+}
+img {
+  width: 100%;
+}
+.images-form {
+  transform: translateX(110px);
+  width: 120px;
+  height: 120px;
+}
+.inputs {
+  margin: 2rem auto;
+}
+.inp {
+  border: none;
+  border-bottom: 2px solid #d9d9d9;
+  display: block;
+  width: 360px;
+  text-transform: capitalize;
+  font-family: poppin-medium, sans-serif;
+  outline: none;
+  height: 52px;
+  margin-bottom: 3rem;
+  transition: var(--Maintransition);
+}
+input::placeholder {
+  font-size: 18px;
+  color: #a8a7a7;
+  padding-left: 7px;
+}
+input:focus {
+  border-color: #57b846;
+}
+.btn {
+  background: #57b846;
+  border: none;
+  width: 330px;
+  height: 50px;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: poppin-semibold;
+  transform: translate(16px);
+  box-shadow: 0px 0px 10px #57b846;
+  transition: var(--Maintransition);
+}
+.btn:hover {
+  background: #1a1919;
+  box-shadow: 0px 0px 10px #1a1919;
+}
+ul{
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.link-form{
+  text-decoration: none;
+  color: #57b846;
+  transition: var(--Maintransition);
+}
+.link-form:hover{
+  color: #1a1919;
+}
+li{
+  font-family: poppin-medium;
+  text-transform: capitalize;
+  color: #a8a7a7;
+}
